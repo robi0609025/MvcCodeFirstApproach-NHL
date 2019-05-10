@@ -1,0 +1,19 @@
+﻿As I have installed Entity FrameWork 6.0 and Entity FrameWorkCore Thats why 'Enable-Migrations' will not work.
+
+You need to put "EntityFramework\Enable-Migrations"
+
+
+//Enable-Migrations -ContextTypeName NhlContext -MigrationDirectory Migrations\NHL
+
+
+
+
+
+[Worked]EntityFramework\Enable-Migrations -ContextTypeName NhlContext -MigrationsDirectory Migrations\NHL
+
+//add-migration -ConfigurationTypeName CodeFirstPrimer.Migrations.NHL.Configuration "InitialCreate"
+
+[Worked]EntityFramework\Add-Migration -ConfigurationTypeName CodeFirstPrimer.Migrations.NHL.Configuration "InitialCreate"
+
+
+[Worked]EntityFramework\Update-Database -ConfigurationTypeName CodeFirstPrimer.Migrations.NHL.Configuration
